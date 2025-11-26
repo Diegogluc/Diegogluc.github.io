@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Diego G. de Lucena: nhanes_projectms</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html#home">Diego G. de Lucena</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <div class="nav-dropdown">
+                    <a href="#projects" class="nav-link">Projects <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <!-- <a href="#projects" class="dropdown-link">All Projects</a> -->
+                        <a href="nhanes_project.html" class="dropdown-link">NHANES Data Analysis</a>
+                        <a href="cnn_project.html" class="dropdown-link">CNN for Civil Engineering</a>
+                        <!-- Adicione mais projetos conforme necessário -->
+                    </div>
+                </div>
+                <a href="posts.html" class="nav-link">Posts</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="nhanes-project" style="padding-top: 120px;">
+        <div class="container project-detail">
+            <div class="dashboard-gallery">
+                <!-- Replace with actual dashboard screenshots -->
+                <div class="gallery-placeholder">Add dashboard screenshots here</div>
+            </div>
+            <div class="project-info-card">
+                <h2 class="section-title">The NHANES Dataset</h2>
+                <p>This project uses a curated version of the dataset from the National Health and Nutrition Examination Surveys (NHANES) survey. The NHANES is a long-term program conducted by the Centers for Disease Control and Prevention (CDC). It collects data about the health of adults and children in the United States, combining interviews, physical examinations, and laboratory tests to assess health and nutritional outcomes.</p>
+                <p>This curated version was provided by the <a href="https://somostera.com/" target="_blank" rel="noopener noreferrer">Tera platform</a> for online courses and contains two .csv files. The first file contains mental health questions data only from adults (5,334 data points). The second .csv file contains eating and exercise habits data of both adults and children (9,424 data points). The original dataset can be accessed using this <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overview.aspx?BeginYear=2005#:~:text=The%20National%20Health%20and%20Nutrition%20Examination%20Survey%2C%202005%2D2006%20(,are%20found%20in%20several%20files." target="_blank" rel="noopener noreferrer">link</a>.</p>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="container project-detail">
+            <div class="dashboard-gallery">
+                <!-- Replace with actual dashboard screenshots -->
+                <div class="gallery-placeholder">Add dashboard screenshots here</div>
+            </div>
+            <div class="project-info-card">
+                <h2 class="section-title">SQL Database development</h2>
+                <p>The .csv files were used to populate two tables into a Database created with MySQL. A new table was created using JOIN query between the two initial tables. The main table contained only information about adults and and was used during the data investigation proces. </p>
+                <br>
+                <p>A data cleaning and data transformation was used while creating the main table. For variables that concataning both values of "refused to answear" and "Did not know", they were transformed into a single variable. The income variable was substitued from a range value to an average value. The main KPI for this data was also defined here, the sum of all the mental health questions were directly related to groups of mental helath symptoms. </p>
+                <ul class="custom-bullet-list">
+                    <li>No symptoms</li>
+                    <li>Mild symptoms</li>
+                    <li>Moderate to Severe symptoms</li>
+                </ul>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="container project-detail">
+            <div class="dashboard-gallery full-width">
+                <h2 class="section-title">Data Investigation</h2>
+                <div class="dashboard-grid">
+                    
+                    <div class="dashboard-screenshot">
+                        <div class="dashboard-screenshot-inner">
+                            <h3 class="screenshot-title">Exploratory Data Analysis</h3>
+                            <div class="screenshot-content">
+                                <p>This first step was an evaluation of each variable of the dataset to understand trends, distributions and spot anomalies. Understanding the distribution of both cathegorical and numerical variables was crucial to define the most relevant attributes.</p>
+                                <p>After this analysis, the impact between variables and the KPI relating mental issues was narrowed down to a small list:</p>
+                                <ul class="custom-bullet-list">
+                                    <li>Weekly hours of exercise</li>
+                                    <li>Gender</li>
+                                    <li>Ethnicity</li>
+                                    <li>Age</li>
+                                    <li>Education level</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-screenshot">
+                        <!-- Replace with actual dashboard screenshot -->
+                        <div class="gallery-placeholder">Dashboard Screenshot 1</div>
+                    </div>
+
+                    <div class="dashboard-screenshot">
+                        <div class="dashboard-screenshot-inner">
+                            <h3 class="screenshot-title">Bivariant Analysis</h3>
+                            <div class="screenshot-content">
+                                <p> This phase focused on understanding the relationship between featured variable listed and the three groups of symptoms.</p>
+                                <p> The visual inspection of a possible correlation in the bivariant analysis will feed the statistical analysis used latter. For the numerical variables a boxplot was used to check min, max values as well as 25, 50 and 75 percentiles. For the cathegorical variables bar charts were used to check diferences in the distributions of the cathegories.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-screenshot">
+                        <!-- Replace with actual dashboard screenshot -->
+                        <div class="gallery-placeholder">Dashboard Screenshot 1</div>
+                    </div>
+                
+                    <div class="dashboard-screenshot">
+                        <div class="dashboard-screenshot-inner">
+                            <h3 class="screenshot-title">Statistical Tests</h3>
+                            <div class="screenshot-content">
+                                <p> ANOVA tests were used compare the mean value of each variable between the three different groups of depression symptoms. If the null hypothesis was rejected (p value < significance level) a pairwise comparisons with TukeyHSD was used to define wich groups have different mean values.</p>
+                                <p> For the cathegorical variables a Chi-square test was performed to check if the depression groups changed in regard the categorical variable tested.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-screenshot">
+                        <!-- Replace with actual dashboard screenshot -->
+                        <div class="gallery-placeholder">Dashboard Screenshot 1</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="container project-detail">
+            <div class="dashboard-gallery full-width">
+                <h2 class="section-title">Power BI Dashboard</h2>
+                
+                <div class="dashboard-screenshot-inner">
+                    <div class="screenshot-content">
+                        <p>
+                            <a href="pdfs/nhanes_dashboard.pdf" target="_blank" class="pdf-link">
+                                <i class="fas fa-file-pdf"></i> Link
+                            </a>
+                            for the pdf file of the Power BI dashboard.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-screenshot">
+                        <!-- Replace with actual dashboard screenshot -->
+                        <div class="gallery-placeholder">Dashboard Screenshot 1</div>
+                    </div>
+                    <div class="dashboard-screenshot">
+                        <!-- Replace with actual dashboard screenshot -->
+                        <div class="gallery-placeholder">Dashboard Screenshot 2</div>
+                    </div>
+                    <div class="dashboard-screenshot">
+                        <!-- Replace with actual dashboard screenshot -->
+                        <div class="gallery-placeholder">Dashboard Screenshot 3</div>
+                    </div>
+                    <div class="dashboard-screenshot">
+                        <!-- Replace with actual dashboard screenshot -->
+                        <div class="gallery-placeholder">Dashboard Screenshot 4</div>
+                    </div>
+                    <div class="dashboard-screenshot">
+                        <!-- Replace with actual dashboard screenshot -->
+                        <div class="gallery-placeholder">Dashboard Screenshot 5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="pdf-viewer">
+            <iframe src="pdfs/nhanes_dashboard.pdf" 
+                    width="100%" 
+                    height="600px"
+                    style="border: 1px solid #ccc; border-radius: 8px;">
+            </iframe>
+        </div> -->
+        
+
+
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Diego. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- A. Standard split layout (image + text)
+<div class="container project-detail">
+    <div class="dashboard-gallery">
+        image(s) -->
+    <!-- </div>
+    <div class="project-info-card">
+        text -->
+    <!-- </div>
+</div>
+B. Full-width content
+<div class="container project-detail">
+    …
+    <div class="dashboard-gallery full-width">
+        wide dashboard image -->
+    <!-- </div>
+</div> -->

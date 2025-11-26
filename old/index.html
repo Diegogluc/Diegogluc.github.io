@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Diego G. de Lucena: A Data Analyst Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Diego G. de Lucena</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <div class="nav-dropdown">
+                    <a href="#projects" class="nav-link">Projects <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <!-- <a href="#projects" class="dropdown-link">All Projects</a> -->
+                        <a href="nhanes_project.html" class="dropdown-link">NHANES Data Analysis</a>
+                        <a href="cnn_project.html" class="dropdown-link">CNN for Civil Engineering</a>
+                        <!-- Adicione mais projetos conforme necessário -->
+                    </div>
+                </div>
+                <a href="posts.html" class="nav-link">Posts</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Diego</span>
+                </h1>
+                <p class="hero-subtitle">
+                    For me, numbers are just a different language you can use to tell interesting stories.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-image">
+                            <img src="pictures\hero-profile.jpg" alt="My Portrait">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        After studying Engineering for the past 15 years, 
+                        I understood that numbers aren't just tools for measuring the world, they're a blueprint for understanding it.
+                        I'm fascinated by the idea that when grouped and transformed, 
+                        data points can reveal patterns that explain completely different phenomena. 
+                        From structural load-bearing capacity to population health trends, absolutly everything has a story. 
+                        This fascination is what drives me to work and transform raw data, 
+                        turning seemingly useless artifacts into powerful insights that open new windows so we can peek on the world.
+                    </p>
+                    <p>
+                        As you'll see in my projects, 
+                        I thrive on analytical challenges and love uncovering the narratives hidden in complex data. 
+                        My approach is anchored in Statistics and rigorous methods, 
+                        but I also heavily value the power of MAchine Learning to accelerate discovery. 
+                        I believe we should always welcome a (mechanical) helping hand!
+                        Whether the data involves a large-scale classification problem or deep exploratory data analysis,
+                        I embrance the opportunity to learn emerging techniques and apply them to deliver innovative solutions.
+                    </p>
+                </div>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Statistics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- Project 1: PhD -> CNN? -->
+    <!-- Project 2: PhD -> Data transformation? -->
+    <!-- Project 3: Tera -> NHANES -->
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>NHANES data analysis and investigation</h3>
+                        <p>Comprehensive analysis of mental health, eating and activity habbits data using Python and Power BI, identifying key indicators and statistical variables that correlate mental health to food and activity habbits.</p>
+                        <div class="project-links">
+                            <a href="nhanes_project.html" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View Analysis
+                            </a>
+                            <a href="https://github.com/yourusername/nhanes-project" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-magnifying-glass-chart"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>CNN for Civil Engineering Time-Series</h3>
+                        <p> Deep learning model using TensorFlow, scikit-learn to classify structural states using acceleration dataset, achieving over 90% accuracy.
+                            
+                        <!-- Classification of Comprehensive analysis of mental health, eating and activity habbits data using Python and Power BI, identifying key performance indicators and trends that led to 15% revenue increase. -->
+                        </p>
+                        <div class="project-links">
+                            <a href="cnn_project.html" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View Analysis
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Transformation of Time-Series</h3>
+                        <p>Machine learning model using scikit-learn to predict customer churn with 87% accuracy, helping reduce churn rate by 23%.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View Model
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Market Research Dashboard</h3>
+                        <p>Interactive Power BI dashboard analyzing market trends, competitor analysis, and customer segmentation for strategic decision making.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View Dashboard
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Pipeline Optimization</h3>
+                        <p>Built automated ETL pipeline using Python and SQL, reducing data processing time by 60% and improving data quality by 40%.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View Pipeline
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>I'm always interested in new opportunities and exciting projects.</p>
+                    <div class="contact-links">
+                        <a href="mailto:diegoglucena@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            diegoglucena@gmail.com
+                        </a>
+                        <a href="https://github.com/Diegogluc" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/diegoglucena/" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Diego. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
