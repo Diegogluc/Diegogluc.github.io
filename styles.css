@@ -698,6 +698,12 @@ a {
     width: 100%;
 }
 
+/* Múltiplas imagens empilhadas verticalmente */
+.dashboard-screenshot:has(img + img) {
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .screenshot-title {
     color: var(--color-accent-blue);
     margin-bottom: var(--spacing-md);
