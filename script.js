@@ -265,3 +265,47 @@ if (skipLink) {
         }
     });
 }
+
+// =====================================================================
+// LIGHTBOX - Image Zoom Functionality
+// =====================================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    
+    if (!lightbox || !lightboxImg) return;
+    
+    // Torna as imagens clicáveis
+    const clickableImages = document.querySelectorAll('.screenshot-image');
+    
+    clickableImages.forEach(img => {
+        img.classList.add('clickable');
+        
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Função para fechar
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    // Fecha ao clicar no X
+    lightboxClose.addEventListener('click', closeLightbox);
+    
+    // Fecha ao clicar fora da imagem
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+    
+    // Fecha ao pressionar ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+});
