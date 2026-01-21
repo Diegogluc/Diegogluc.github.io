@@ -29,7 +29,7 @@
                         <!-- Adicione mais projetos conforme necessário -->
                     </div>
                 </div>
-                <a href="posts.html" class="nav-link">Posts</a>
+                <!-- <a href="posts.html" class="nav-link">Posts</a> -->
                 <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
@@ -40,91 +40,79 @@
         </div>
     </nav>
 
-    <section class="nhanes-project" style="padding-top: 120px;">
+    <!-- NHANES Project Section -->     
+    <section class="project-section" id="nhanes-project">
+
+        <div class="container project-detail">
+            <div class="project-info-card">
+                <h2 class="section-title">Objectives</h2>
+                <p>Analyzed mental health patterns across 5,334 adults from the National Health and Nutrition Examination Survey (NHANES) to identify key demographic and lifestyle factors associated with depression symptom severity using statistical hypothesis testing</p>
+            </div>
+        </div>
+        
+
         <div class="container project-detail">
             <div class="dashboard-gallery">
                 <img src="pictures/nhanes/the-dataset.png" alt="The dataset" class="screenshot-image">
             </div>
             <div class="project-info-card">
                 <h2 class="section-title">The NHANES Dataset</h2>
-                <p>This project uses a curated version of the dataset from the National Health and Nutrition Examination Surveys (NHANES) survey. The NHANES is a long-term program conducted by the Centers for Disease Control and Prevention (CDC). It collects data about the health of adults and children in the United States, combining interviews, physical examinations, and laboratory tests to assess health and nutritional outcomes.</p>
-                <p>This curated version was provided by the <a href="https://somostera.com/" target="_blank" rel="noopener noreferrer">Tera platform</a> for online courses and contains two .csv files. The first file contains mental health questions data only from adults (5,334 data points). The second .csv file contains eating and exercise habits data of both adults and children (9,424 data points). The original dataset can be accessed using this <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overview.aspx?BeginYear=2005#:~:text=The%20National%20Health%20and%20Nutrition%20Examination%20Survey%2C%202005%2D2006%20(,are%20found%20in%20several%20files." target="_blank" rel="noopener noreferrer">link</a>.</p>
-            </div>
-        </div>
-
-        <br>
-
-        <div class="container project-detail">
-            <div class="dashboard-gallery">
-                <img src="pictures/nhanes/sql-development.png" alt="SQL Development" class="screenshot-image">
-            </div>
-            <div class="project-info-card">
-                <h2 class="section-title">SQL Database development</h2>
-                <p>The .csv files were used to populate two tables into a Database created with MySQL. A new table was created using JOIN query between the two initial tables. The main table contained only information about adults and and was used during the data investigation proces. </p>
-                <br>
-                <p>A data cleaning and data transformation was used while creating the main table. For variables that concataning both values of "refused to answear" and "Did not know", they were transformed into a single variable. The income variable was substitued from a range value to an average value. The main KPI for this data was also defined here, the sum of all the mental health questions were directly related to groups of mental helath symptoms. </p>
+                <p>The NHANES is a long-term program conducted by the Centers for Disease Control and Prevention (CDC) that collects data about the health of adults and children in the United States through interviews, physical examinations, and laboratory tests.</p>
+                <p>This curated version was provided by the <a href="https://somostera.com/" target="_blank" rel="noopener noreferrer">Tera platform</a> for online courses and and contains two .csv files:</p>
                 <ul class="custom-bullet-list">
-                    <li>No symptoms</li>
-                    <li>Mild symptoms</li>
-                    <li>Moderate to Severe symptoms</li>
+                    <li>Mental health data from 5,334 adults</li>
+                    <li>Eating and exercise habits data from 9,424 subjects (adults and children)</li>
                 </ul>
+                <p>The original dataset can be accessed using this <a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overview.aspx?BeginYear=2005#:~:text=The%20National%20Health%20and%20Nutrition%20Examination%20Survey%2C%202005%2D2006%20(,are%20found%20in%20several%20files." target="_blank" rel="noopener noreferrer">link</a>.</p>
             </div>
         </div>
-
-        <br>
 
         <div class="container project-detail">
             <div class="dashboard-gallery full-width">
-                <h2 class="section-title">Data Investigation</h2>
+                <h2 class="section-title">Methodology</h2>
                 <div class="dashboard-grid">
                     
                     <div class="dashboard-screenshot">
                         <div class="dashboard-screenshot-inner">
-                            <h3 class="screenshot-title">Exploratory Data Analysis</h3>
+                            <h3 class="screenshot-title">Data Processing</h3>
                             <div class="screenshot-content">
-                                <p>This first step was an evaluation of each variable of the dataset to understand trends, distributions and spot anomalies. Understanding the distribution of both cathegorical and numerical variables was crucial to define the most relevant attributes.</p>
-                                <p>After this analysis, the impact between variables and the KPI relating mental issues was narrowed down to a small list:</p>
-                                <ul class="custom-bullet-list">
-                                    <li>Weekly hours of exercise</li>
-                                    <li>Gender</li>
-                                    <li>Ethnicity</li>
-                                    <li>Age</li>
-                                    <li>Education level</li>
-                                </ul>
+                                <p>Created a MySQL database from the two CSV files and joined tables to focus analysis on adult subjects only. Applied data cleaning and transformation including:</p>
+                            <ul class="custom-bullet-list">
+                                <li>Standardized missing value categories ("refused to answer" and "did not know")</li>
+                                <li>Converted income ranges to average values</li>
+                                <li>Created depression symptom severity KPI by summing scores across all mental health questionnaire items</li>
+                            </ul>
                             </div>
                         </div>
                     </div>
 
-                        <div class="dashboard-screenshot">
-                            <img src="pictures/nhanes/data-exploraton-hnanes.png" alt="Data Exploration Analysis" class="screenshot-image">
-                        </div>
-
-                    <div class="dashboard-screenshot">
-                        <div class="dashboard-screenshot-inner">
-                            <h3 class="screenshot-title">Bivariant Analysis</h3>
-                            <div class="screenshot-content">
-                                <p> This phase focused on understanding the relationship between featured variable listed and the three groups of symptoms.</p>
-                                <p> The visual inspection of a possible correlation in the bivariant analysis will feed the statistical analysis used latter. For the numerical variables a boxplot was used to check min, max values as well as 25, 50 and 75 percentiles. For the cathegorical variables bar charts were used to check diferences in the distributions of the cathegories.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                        <div class="dashboard-screenshot">
-                            <img src="pictures/nhanes/bivariant_analysis_nhanes.png" alt="Bivariant Analysis" class="screenshot-image">
-                        </div>
-                
                     <div class="dashboard-screenshot">
                         <div class="dashboard-screenshot-inner">
                             <h3 class="screenshot-title">Statistical Tests</h3>
                             <div class="screenshot-content">
-                                <p> ANOVA tests were used compare the mean value of each variable between the three different groups of depression symptoms. If the null hypothesis was rejected (p value < significance level) a pairwise comparisons with TukeyHSD was used to define wich groups have different mean values.</p>
-                                <p> For the cathegorical variables a Chi-square test was performed to check if the depression groups changed in regard the categorical variable tested.</p>
+                                <p> Conducted exploratory data analysis to identify relevant variables, then performed hypothesis testing:</p>
+                                <ul class="custom-bullet-list">
+                                    <li><b>ANOVA tests</b>with Tukey HSD post-hoc comparisons for quantitative variables (comparing means across depression symptom groups)</li>
+                                    <li><b>Chi-square tests</b> for categorical variables (testing associations with depression symptom groups)</li>
+                                </ul>
+                                <p>Depression symptoms were classified into three groups: no symptoms, mild symptoms, and moderate to severe symptoms.</p>
                             </div>
                         </div>
+                    </div>
+                    
+                    <div class="dashboard-screenshot">
+                            <img src="pictures/nhanes/data-exploraton-hnanes.png" alt="Data Exploration Analysis" class="screenshot-image">
+                    </div>
+
+                    <div class="dashboard-screenshot">
+                            <img src="pictures/nhanes/bivariant_analysis_nhanes.png" alt="Bivariant Analysis" class="screenshot-image">
                     </div>
 
                     <div class="dashboard-screenshot stacked">
                         <img src="pictures/nhanes/anova_results.png" alt="ANOVA Results" class="screenshot-image">
+                    </div>
+                    
+                    <div class="dashboard-screenshot stacked">
                         <img src="pictures/nhanes/chi2_results.png" alt="Chi-Square Results" class="screenshot-image">
                     </div>
 
@@ -132,9 +120,50 @@
             </div>
         </div>
 
+        <br>
+
         <div class="container project-detail">
             <div class="dashboard-gallery full-width">
-                <h2 class="section-title">Power BI Dashboard</h2>
+                <h2 class="section-title">Key Findings</h2>
+                <div class="dashboard-grid">
+                    
+                    <div class="dashboard-screenshot">
+                        <div class="dashboard-screenshot-inner">
+                            <h3 class="screenshot-title">Categorical Variables</h3>
+                            <div class="screenshot-content">
+                                <p>All categorical variables analyzed showed statistically significant associations with depression symptom severity:</p>
+                                <p><b>Gender</b> Female subjects were more likely to experience mild and moderate to severe depression symptoms compared to male subjects.</p>
+                                <p><b>Ethnicity</b> Non-Hispanic Black and Other Hispanic subjects showed higher rates of mild and moderate to severe depression symptoms.</p>
+                                <p><b>Education Level:</b></p>
+                                <ul class="custom-bullet-list">
+                                    <li>Subjects with 9th-12th grade education (no diploma) were more susceptible to mild and moderate to severe symptoms</li>
+                                    <li>College graduates showed lower rates of depression symptoms across all severity levels</li>
+                                </ul>
+                                <p><b>Physical Activity Adherence:</b> Subjects with low adherence to physical activity guidelines were significantly more likely to experience mild and moderate to severe depression symptoms.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-screenshot">
+                        <div class="dashboard-screenshot-inner">
+                            <h3 class="screenshot-title">Quantitative Variables</h3>
+                            <div class="screenshot-content">
+                                <p>Weekly exercise hours showed statistically significant differences between depression groups. Subjects with moderate to severe symptoms exercised significantly fewer hours per week compared to those with no symptoms or mild symptoms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container project-detail">
+            <div class="dashboard-gallery full-width">
+                <h2 class="section-title">Visualization</h2>
+                <div class="dashboard-screenshot-inner">
+                    <div class="screenshot-content">
+                        <p>An interactive dashboard was developed in Power BI to visualize distributions, bivariate relationships, and statistical test results.</p>
+                    </div>
+                </div>
 
                 <div class="dashboard-grid">
                     <div class="dashboard-screenshot">
@@ -164,6 +193,7 @@
                         </p>
                     </div>
                 </div>
+
             </div>
         </div>
 

@@ -1,0 +1,62 @@
+# Mental Health Analysis: NHANES Dataset
+
+## Objective
+
+Analyzed mental health patterns across 5,334 adults from the National Health and Nutrition Examination Survey (NHANES) to identify key demographic and lifestyle factors associated with depression symptom severity using statistical hypothesis testing.
+
+## Dataset
+
+The NHANES is a long-term program conducted by the Centers for Disease Control and Prevention (CDC) that collects data about the health of adults and children in the United States through interviews, physical examinations, and laboratory tests.
+
+This curated version was provided by the [Tera platform](https://somostera.com/) and contains two .csv files:
+
+- Mental health data from 5,334 adults
+- Eating and exercise habits data from 9,424 subjects (adults and children)
+
+The original dataset can be accessed [here](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overview.aspx?BeginYear=2005#:~:text=The%20National%20Health%20and%20Nutrition%20Examination%20Survey%2C%202005%2D2006%20(,are%20found%20in%20several%20files.).
+
+## Methodology
+
+### Data Processing
+
+Created a MySQL database from the two CSV files and joined tables to focus analysis on adult subjects only. Applied data cleaning and transformation including:
+
+- Standardized missing value categories ("refused to answer" and "did not know")
+- Converted income ranges to average values
+- Created depression symptom severity KPI by summing scores across all mental health questionnaire items
+
+### Statistical Analysis
+
+Conducted exploratory data analysis to identify relevant variables, then performed hypothesis testing:
+
+- **ANOVA tests** with Tukey HSD post-hoc comparisons for quantitative variables (comparing means across depression symptom groups)
+- **Chi-square tests** for categorical variables (testing associations with depression symptom groups)
+
+Depression symptoms were classified into three groups: no symptoms, mild symptoms, and moderate to severe symptoms.
+
+## Key Findings
+
+### Quantitative Variables
+
+**Weekly exercise hours** showed statistically significant differences between depression groups. Subjects with moderate to severe symptoms exercised significantly fewer hours per week compared to those with no symptoms or mild symptoms.
+
+### Categorical Variables
+
+All categorical variables analyzed showed statistically significant associations with depression symptom severity:
+
+**Gender:** Female subjects were more likely to experience mild and moderate to severe depression symptoms compared to male subjects.
+
+**Ethnicity:** Non-Hispanic Black and Other Hispanic subjects showed higher rates of mild and moderate to severe depression symptoms.
+
+**Education Level:**
+
+- Subjects with 9th-12th grade education (no diploma) were more susceptible to mild and moderate to severe symptoms
+- College graduates showed lower rates of depression symptoms across all severity levels
+
+**Physical Activity Adherence:** Subjects with low adherence to physical activity guidelines were significantly more likely to experience mild and moderate to severe depression symptoms.
+
+## Visualization
+
+An interactive dashboard was developed in Power BI to visualize distributions, bivariate relationships, and statistical test results.
+
+[Link](pdfs/nhanes_dashboard.pdf) to the Power BI dashboard (PDF).
